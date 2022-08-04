@@ -9,13 +9,13 @@
 - Install directly with `pip` command  
 
   ```sh
-  pip install "git+ssh://gitlab.com/y2kblog/sc18im700-py.git"
+  pip install "git+ssh://github.com/y2kblog/sc18im700-py.git"
   ```
 
 - Install from `requirements.txt`  
   If you install with `pip install -r requirements.txt`, put the following in `requirements.txt`
   ```txt
-  -e "git+ssh://gitlab.com/y2kblog/sc18im700-py.git#egg=sc18im700"
+  -e "git+ssh://github.com/y2kblog/sc18im700-py.git#egg=sc18im700"
   ```
 
 After installing the package, it can be imported with the following command.  

@@ -129,8 +129,7 @@ class SC18IM700:
         if i2c_addr is None:
             i2c_addr = self._i2c_addr
         addr_w = self._i2c_write_addr(i2c_addr)
-        wdata =  self.START_CMD + bytes([addr_w, 1]) + bytes([reg_addr])
-        wdata += self.START_CMD + bytes([addr_w, len(data_bytes)]) + bytes(data_bytes) + self.STOP_CMD
+        wdata =  self.START_CMD + bytes([addr_w, 1 + len(data_bytes)]) + bytes([reg_addr]) + bytes(data_bytes) + self.STOP_CMD
         self._tx(wdata)
 
 

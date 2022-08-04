@@ -9,7 +9,7 @@ AUTHOR = 'Y2Kb'
 AUTHOR_EMAIL = 'info.y2kb@gmail.com'
 DESCRIPTION = 'NXP SC18IM700 Library'
 LONG_DESCRIPTION = 'NXP SC18IM700 python library'
-URL = 'https://gitlab.com/y2kblog/sc18im700-py'
+URL = 'https://github.com/y2kblog/sc18im700-py'
 
 
 # Functions
