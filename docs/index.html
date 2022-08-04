@@ -28,6 +28,8 @@
 </summary>
 <pre><code class="python"># -*- coding: utf-8 -*-
 
+# pdoc --html --force -o docs sc18im700/sc18im700.py
+
 # Standard libraries
 # Non-standard libraries
 import serial
@@ -61,6 +63,16 @@ class SC18IM700:
     I2CStat_I2C_TIME_OUT = 0xF8
 
     def __init__(self, port:str, baudrate:int = 9600, default_i2c_addr=None) -&gt; None:
+        &#34;&#34;&#34;Constructor
+
+        Args:
+            port (str): Serial port. ex: &#39;COM1&#39;, &#39;/dev/ttyUSB0&#39;
+            baudrate (int): Baudrate. Default: 9600
+            default_i2c_addr (optional): Default target I2C device address
+
+        Returns:
+            bytes: Received data
+        &#34;&#34;&#34;
         self._serial = serial.Serial(port, timeout=0.655, baudrate=9600)
         self._i2c_addr = default_i2c_addr
         if baudrate != 9600:
@@ -319,7 +331,22 @@ if __name__ == &#34;__main__&#34;:
 <span>(</span><span>port: str, baudrate: int = 9600, default_i2c_addr=None)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>SC18IM700 class</p></div>
+<div class="desc"><p>SC18IM700 class</p>
+<p>Constructor</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>port</code></strong> :&ensp;<code>str</code></dt>
+<dd>Serial port. ex: 'COM1', '/dev/ttyUSB0'</dd>
+<dt><strong><code>baudrate</code></strong> :&ensp;<code>int</code></dt>
+<dd>Baudrate. Default: 9600</dd>
+<dt><strong><code>default_i2c_addr</code></strong> :&ensp;<code>optional</code></dt>
+<dd>Default target I2C device address</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bytes</code></dt>
+<dd>Received data</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -353,6 +380,16 @@ if __name__ == &#34;__main__&#34;:
     I2CStat_I2C_TIME_OUT = 0xF8
 
     def __init__(self, port:str, baudrate:int = 9600, default_i2c_addr=None) -&gt; None:
+        &#34;&#34;&#34;Constructor
+
+        Args:
+            port (str): Serial port. ex: &#39;COM1&#39;, &#39;/dev/ttyUSB0&#39;
+            baudrate (int): Baudrate. Default: 9600
+            default_i2c_addr (optional): Default target I2C device address
+
+        Returns:
+            bytes: Received data
+        &#34;&#34;&#34;
         self._serial = serial.Serial(port, timeout=0.655, baudrate=9600)
         self._i2c_addr = default_i2c_addr
         if baudrate != 9600:

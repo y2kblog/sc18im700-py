@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+# pdoc --html --force -o docs sc18im700/sc18im700.py
+
 # Standard libraries
 # Non-standard libraries
 import serial
@@ -33,6 +35,16 @@ class SC18IM700:
     I2CStat_I2C_TIME_OUT = 0xF8
 
     def __init__(self, port:str, baudrate:int = 9600, default_i2c_addr=None) -> None:
+        """Constructor
+
+        Args:
+            port (str): Serial port. ex: 'COM1', '/dev/ttyUSB0'
+            baudrate (int): Baudrate. Default: 9600
+            default_i2c_addr (optional): Default target I2C device address
+
+        Returns:
+            None
+        """
         self._serial = serial.Serial(port, timeout=0.655, baudrate=9600)
         self._i2c_addr = default_i2c_addr
         if baudrate != 9600:
