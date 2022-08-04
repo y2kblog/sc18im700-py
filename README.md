@@ -1,8 +1,6 @@
 # SC18IM700 Python library
 
-
-## Document
-
+## [Documentation](https://y2kblog.github.io/sc18im700-py/)  
 
 ## How to install
 
