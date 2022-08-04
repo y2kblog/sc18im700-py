@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>sc18im700 API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>sc18im700</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+# Standard libraries
+# Non-standard libraries
+import serial
+
+class SC18IM700:
+    &#34;&#34;&#34;SC18IM700 class
+    &#34;&#34;&#34;
+
+    START_CMD      = b&#39;S&#39;
+    STOP_CMD       = b&#39;P&#39;
+    READ_REG_CMD   = b&#39;R&#39;
+    WRITE_REG_CMD  = b&#39;W&#39;
+    GPIO_READ_CMD  = b&#39;I&#39;
+    GPIO_WRITE_CMD = b&#39;O&#39;
+    POWER_DOWN_CMD = b&#39;Z&#39;
+
+    REG_BRG0      = 0x00
+    REG_BRG1      = 0x01
+    REG_PortConf1 = 0x02
+    REG_PortConf2 = 0x03
+    REG_IOState   = 0x04
+    REG_I2CAdr    = 0x06
+    REG_I2CClkL   = 0x07
+    REG_I2CClkH   = 0x08
+    REG_I2CTO     = 0x09
+    REG_I2CStat   = 0x0A
+
+    I2CStat_I2C_OK = 0xF0
+    I2CStat_I2C_NACK_ON_ADDRESS = 0xF1
+    I2CStat_I2C_NACK_ON_DATA = 0xF2
+    I2CStat_I2C_TIME_OUT = 0xF8
+
+    def __init__(self, port:str, baudrate:int = 9600, default_i2c_addr=None) -&gt; None:
+        self._serial = serial.Serial(port, timeout=0.655, baudrate=9600)
+        self._i2c_addr = default_i2c_addr
+        if baudrate != 9600:
+            val = 7372800 / baudrate - 16
+            bytes_brg = round(val).to_bytes(2, &#39;little&#39;)
+            brg0 = bytes_brg[0]
+            brg1 = bytes_brg[1]
+            self.write_regs([self.REG_BRG0, brg0, self.REG_BRG1, brg1])
+            self._serial.close()
+            self._serial = serial.Serial(port, timeout=0.655, baudrate=baudrate)
+
+
+    def __del__(self):
+        self._serial.close()
+
+
+    def _tx(self, data_bytes:bytes) -&gt; None:
+        self._serial.write(data_bytes)
+
+
+    def _rx(self, size:int = 1) -&gt; bytes:
+        return self._serial.read(size=size)
+
+
+    def _i2c_write_addr(self, addr:int) -&gt; int:
+        return (addr &lt;&lt; 1) &amp; 0xFE
+
+
+    def _i2c_read_addr(self, addr:int) -&gt; int:
+        return (addr &lt;&lt; 1) | 0x01
+
+
+    def set_defalt_i2c_addr(self, default_i2c_addr:int) -&gt; None:
+        &#34;&#34;&#34;Set default I2C Address
+
+        Args:
+            default_i2c_addr (int): I2C Address
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        self._i2c_addr = default_i2c_addr
+
+
+    def i2c_write(self, data_bytes:bytes, i2c_addr=None) -&gt; None:
+        &#34;&#34;&#34;I2C: Transmits in master mode an amount of data
+
+        Args:
+            data_bytes (bytes): Data
+            i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        size = len(data_bytes)
+        if i2c_addr is None:
+            i2c_addr = self._i2c_addr
+        if size &gt;= 256:
+            raise Exception(&#34;Cannot i2c write more than 256 bytes&#34;)
+        addr_w = self._i2c_write_addr(i2c_addr)
+        wdata = self.START_CMD + bytes([addr_w, size]) + data_bytes + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def i2c_read(self, i2c_addr=None, size:int=1) -&gt; bytes:
+        &#34;&#34;&#34;I2C: Receives in master mode an amount of data
+
+        Args:
+            i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+            size (int): Amount of data
+
+        Returns:
+            bytes: Received data
+        &#34;&#34;&#34;
+        if i2c_addr is None:
+            i2c_addr = self._i2c_addr
+        addr_r = self._i2c_read_addr(i2c_addr)
+        wdata = self.START_CMD + bytes([addr_r, size]) + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(size)
+
+
+    def i2c_mem_write(self, reg_addr:int, data_bytes:bytes, i2c_addr=None) -&gt; None:
+        &#34;&#34;&#34;I2C: Write an amount of data to a specific memory address
+
+        Args:
+            reg_addr (int): Register address
+            data_bytes (bytes): Data
+            i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        if i2c_addr is None:
+            i2c_addr = self._i2c_addr
+        addr_w = self._i2c_write_addr(i2c_addr)
+        wdata =  self.START_CMD + bytes([addr_w, 1]) + bytes([reg_addr])
+        wdata += self.START_CMD + bytes([addr_w, len(data_bytes)]) + bytes(data_bytes) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def i2c_mem_read(self, reg_addr:int, size:int=1, i2c_addr=None) -&gt; bytes:
+        &#34;&#34;&#34;I2C: Read an amount of data from a specific memory address
+
+        Args:
+            reg_addr (int): Register address
+            size (int): Amount of data
+            i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+        Returns:
+            bytes: Received data
+        &#34;&#34;&#34;
+        if i2c_addr is None:
+            i2c_addr = self._i2c_addr
+        addr_w = self._i2c_write_addr(i2c_addr)
+        addr_r = self._i2c_read_addr(i2c_addr)
+        wdata =  self.START_CMD + bytes([addr_w, 1]) + bytes([reg_addr])
+        wdata += self.START_CMD + bytes([addr_r, size]) + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(size)
+
+
+    def gpio_write(self, data:int) -&gt; None:
+        &#34;&#34;&#34;Write GPIO register
+
+        Args:
+            data (int): GPIO register value
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        wdata = self.GPIO_WRITE_CMD +  bytes([data]) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def gpio_read(self) -&gt; bytes:
+        &#34;&#34;&#34;Read GPIO register
+
+        Returns:
+            bytes: Received GPIO register value
+        &#34;&#34;&#34;
+        wdata = self.GPIO_READ_CMD + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(1)
+
+
+    def power_down(self) -&gt; None:
+        &#34;&#34;&#34;Power down
+        &#34;&#34;&#34;
+        wdata = self.POWER_DOWN_CMD +  bytes([0x5A, 0xA5]) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def write_reg(self, reg_addr:int, data:int) -&gt; None:
+        &#34;&#34;&#34;Set value in one register
+
+        Args:
+            reg_addr (int): Register address
+            data (int): Register value
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        wdata = self.WRITE_REG_CMD + bytes([reg_addr]) + bytes([data]) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def write_regs(self, regAddr_vals:list[int]) -&gt; None:
+        &#34;&#34;&#34;Set values in multiple registers
+
+        Args:
+            regAddr_vals (list[int]): Register address and values. [REG_ADDR0, REG_VAL0, ..., REG_ADDRn, REG_VALn]
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        wdata = self.WRITE_REG_CMD + bytes(regAddr_vals) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def read_reg(self, reg_addr:int) -&gt; bytes:
+        &#34;&#34;&#34;Get value in one register
+
+        Args:
+            reg_addr (int): Register address
+
+        Returns:
+            bytes: Register value
+        &#34;&#34;&#34;
+        wdata = self.READ_REG_CMD + bytes([reg_addr]) + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(1)
+
+
+    def read_regs(self, regAddrs:list[int]) -&gt; bytes:
+        &#34;&#34;&#34;Get values in multiple registers
+
+        Args:
+            regAddrs (list[int]): Register addresses. [REG_ADDR0, ..., REG_ADDRn]
+
+        Returns:
+            bytes: Received register values
+        &#34;&#34;&#34;
+        wdata = self.READ_REG_CMD + bytes(regAddrs) + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(len(regAddrs))
+
+
+    def enable_timeout(self):
+        &#34;&#34;&#34;Enable timeout
+        &#34;&#34;&#34;
+        self.write_reg(self.REG_I2CTO, 0x67)
+
+
+    def i2c_device_search(self) -&gt; list[int]:
+        &#34;&#34;&#34;Search and get I2C device address list
+
+        Returns:
+            list[int]: Found I2C address list
+        &#34;&#34;&#34;
+        self.enable_timeout()
+        dev_addr_list = []
+        print(&#39;*I2C Device Search Start*&#39;)
+        for addr in range(0x01, 0x7E, 1):
+            self.i2c_write(bytes([0x00]), i2c_addr=addr)
+            res = self.read_reg(self.REG_I2CStat)
+            if res == bytes([self.I2CStat_I2C_OK]):
+                print(&#39;Device Found: 0x&#39; + &#39;{:X}&#39;.format(addr) + &#39; (7bit Address)&#39;)
+                dev_addr_list.append(addr)
+        print(&#39;*I2C Device Search End*&#39;)
+        return dev_addr_list
+
+
+if __name__ == &#34;__main__&#34;:
+    import sys
+    sc18 = SC18IM700(port=&#39;COM7&#39;, baudrate=9600)
+    dev_addr_list = sc18.i2c_device_search()
+    if len(dev_addr_list) == 0:
+        sys.exit(1)
+
+    i2c_addr = dev_addr_list[0]
+    sc18.set_defalt_i2c_addr(i2c_addr)
+    print(sc18.i2c_mem_read(reg_addr=0x03, size=4))</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="sc18im700.SC18IM700"><code class="flex name class">
+<span>class <span class="ident">SC18IM700</span></span>
+<span>(</span><span>port: str, baudrate: int = 9600, default_i2c_addr=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>SC18IM700 class</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SC18IM700:
+    &#34;&#34;&#34;SC18IM700 class
+    &#34;&#34;&#34;
+
+    START_CMD      = b&#39;S&#39;
+    STOP_CMD       = b&#39;P&#39;
+    READ_REG_CMD   = b&#39;R&#39;
+    WRITE_REG_CMD  = b&#39;W&#39;
+    GPIO_READ_CMD  = b&#39;I&#39;
+    GPIO_WRITE_CMD = b&#39;O&#39;
+    POWER_DOWN_CMD = b&#39;Z&#39;
+
+    REG_BRG0      = 0x00
+    REG_BRG1      = 0x01
+    REG_PortConf1 = 0x02
+    REG_PortConf2 = 0x03
+    REG_IOState   = 0x04
+    REG_I2CAdr    = 0x06
+    REG_I2CClkL   = 0x07
+    REG_I2CClkH   = 0x08
+    REG_I2CTO     = 0x09
+    REG_I2CStat   = 0x0A
+
+    I2CStat_I2C_OK = 0xF0
+    I2CStat_I2C_NACK_ON_ADDRESS = 0xF1
+    I2CStat_I2C_NACK_ON_DATA = 0xF2
+    I2CStat_I2C_TIME_OUT = 0xF8
+
+    def __init__(self, port:str, baudrate:int = 9600, default_i2c_addr=None) -&gt; None:
+        self._serial = serial.Serial(port, timeout=0.655, baudrate=9600)
+        self._i2c_addr = default_i2c_addr
+        if baudrate != 9600:
+            val = 7372800 / baudrate - 16
+            bytes_brg = round(val).to_bytes(2, &#39;little&#39;)
+            brg0 = bytes_brg[0]
+            brg1 = bytes_brg[1]
+            self.write_regs([self.REG_BRG0, brg0, self.REG_BRG1, brg1])
+            self._serial.close()
+            self._serial = serial.Serial(port, timeout=0.655, baudrate=baudrate)
+
+
+    def __del__(self):
+        self._serial.close()
+
+
+    def _tx(self, data_bytes:bytes) -&gt; None:
+        self._serial.write(data_bytes)
+
+
+    def _rx(self, size:int = 1) -&gt; bytes:
+        return self._serial.read(size=size)
+
+
+    def _i2c_write_addr(self, addr:int) -&gt; int:
+        return (addr &lt;&lt; 1) &amp; 0xFE
+
+
+    def _i2c_read_addr(self, addr:int) -&gt; int:
+        return (addr &lt;&lt; 1) | 0x01
+
+
+    def set_defalt_i2c_addr(self, default_i2c_addr:int) -&gt; None:
+        &#34;&#34;&#34;Set default I2C Address
+
+        Args:
+            default_i2c_addr (int): I2C Address
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        self._i2c_addr = default_i2c_addr
+
+
+    def i2c_write(self, data_bytes:bytes, i2c_addr=None) -&gt; None:
+        &#34;&#34;&#34;I2C: Transmits in master mode an amount of data
+
+        Args:
+            data_bytes (bytes): Data
+            i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        size = len(data_bytes)
+        if i2c_addr is None:
+            i2c_addr = self._i2c_addr
+        if size &gt;= 256:
+            raise Exception(&#34;Cannot i2c write more than 256 bytes&#34;)
+        addr_w = self._i2c_write_addr(i2c_addr)
+        wdata = self.START_CMD + bytes([addr_w, size]) + data_bytes + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def i2c_read(self, i2c_addr=None, size:int=1) -&gt; bytes:
+        &#34;&#34;&#34;I2C: Receives in master mode an amount of data
+
+        Args:
+            i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+            size (int): Amount of data
+
+        Returns:
+            bytes: Received data
+        &#34;&#34;&#34;
+        if i2c_addr is None:
+            i2c_addr = self._i2c_addr
+        addr_r = self._i2c_read_addr(i2c_addr)
+        wdata = self.START_CMD + bytes([addr_r, size]) + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(size)
+
+
+    def i2c_mem_write(self, reg_addr:int, data_bytes:bytes, i2c_addr=None) -&gt; None:
+        &#34;&#34;&#34;I2C: Write an amount of data to a specific memory address
+
+        Args:
+            reg_addr (int): Register address
+            data_bytes (bytes): Data
+            i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        if i2c_addr is None:
+            i2c_addr = self._i2c_addr
+        addr_w = self._i2c_write_addr(i2c_addr)
+        wdata =  self.START_CMD + bytes([addr_w, 1]) + bytes([reg_addr])
+        wdata += self.START_CMD + bytes([addr_w, len(data_bytes)]) + bytes(data_bytes) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def i2c_mem_read(self, reg_addr:int, size:int=1, i2c_addr=None) -&gt; bytes:
+        &#34;&#34;&#34;I2C: Read an amount of data from a specific memory address
+
+        Args:
+            reg_addr (int): Register address
+            size (int): Amount of data
+            i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+        Returns:
+            bytes: Received data
+        &#34;&#34;&#34;
+        if i2c_addr is None:
+            i2c_addr = self._i2c_addr
+        addr_w = self._i2c_write_addr(i2c_addr)
+        addr_r = self._i2c_read_addr(i2c_addr)
+        wdata =  self.START_CMD + bytes([addr_w, 1]) + bytes([reg_addr])
+        wdata += self.START_CMD + bytes([addr_r, size]) + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(size)
+
+
+    def gpio_write(self, data:int) -&gt; None:
+        &#34;&#34;&#34;Write GPIO register
+
+        Args:
+            data (int): GPIO register value
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        wdata = self.GPIO_WRITE_CMD +  bytes([data]) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def gpio_read(self) -&gt; bytes:
+        &#34;&#34;&#34;Read GPIO register
+
+        Returns:
+            bytes: Received GPIO register value
+        &#34;&#34;&#34;
+        wdata = self.GPIO_READ_CMD + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(1)
+
+
+    def power_down(self) -&gt; None:
+        &#34;&#34;&#34;Power down
+        &#34;&#34;&#34;
+        wdata = self.POWER_DOWN_CMD +  bytes([0x5A, 0xA5]) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def write_reg(self, reg_addr:int, data:int) -&gt; None:
+        &#34;&#34;&#34;Set value in one register
+
+        Args:
+            reg_addr (int): Register address
+            data (int): Register value
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        wdata = self.WRITE_REG_CMD + bytes([reg_addr]) + bytes([data]) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def write_regs(self, regAddr_vals:list[int]) -&gt; None:
+        &#34;&#34;&#34;Set values in multiple registers
+
+        Args:
+            regAddr_vals (list[int]): Register address and values. [REG_ADDR0, REG_VAL0, ..., REG_ADDRn, REG_VALn]
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        wdata = self.WRITE_REG_CMD + bytes(regAddr_vals) + self.STOP_CMD
+        self._tx(wdata)
+
+
+    def read_reg(self, reg_addr:int) -&gt; bytes:
+        &#34;&#34;&#34;Get value in one register
+
+        Args:
+            reg_addr (int): Register address
+
+        Returns:
+            bytes: Register value
+        &#34;&#34;&#34;
+        wdata = self.READ_REG_CMD + bytes([reg_addr]) + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(1)
+
+
+    def read_regs(self, regAddrs:list[int]) -&gt; bytes:
+        &#34;&#34;&#34;Get values in multiple registers
+
+        Args:
+            regAddrs (list[int]): Register addresses. [REG_ADDR0, ..., REG_ADDRn]
+
+        Returns:
+            bytes: Received register values
+        &#34;&#34;&#34;
+        wdata = self.READ_REG_CMD + bytes(regAddrs) + self.STOP_CMD
+        self._tx(wdata)
+        return self._rx(len(regAddrs))
+
+
+    def enable_timeout(self):
+        &#34;&#34;&#34;Enable timeout
+        &#34;&#34;&#34;
+        self.write_reg(self.REG_I2CTO, 0x67)
+
+
+    def i2c_device_search(self) -&gt; list[int]:
+        &#34;&#34;&#34;Search and get I2C device address list
+
+        Returns:
+            list[int]: Found I2C address list
+        &#34;&#34;&#34;
+        self.enable_timeout()
+        dev_addr_list = []
+        print(&#39;*I2C Device Search Start*&#39;)
+        for addr in range(0x01, 0x7E, 1):
+            self.i2c_write(bytes([0x00]), i2c_addr=addr)
+            res = self.read_reg(self.REG_I2CStat)
+            if res == bytes([self.I2CStat_I2C_OK]):
+                print(&#39;Device Found: 0x&#39; + &#39;{:X}&#39;.format(addr) + &#39; (7bit Address)&#39;)
+                dev_addr_list.append(addr)
+        print(&#39;*I2C Device Search End*&#39;)
+        return dev_addr_list</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="sc18im700.SC18IM700.GPIO_READ_CMD"><code class="name">var <span class="ident">GPIO_READ_CMD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.GPIO_WRITE_CMD"><code class="name">var <span class="ident">GPIO_WRITE_CMD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.I2CStat_I2C_NACK_ON_ADDRESS"><code class="name">var <span class="ident">I2CStat_I2C_NACK_ON_ADDRESS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.I2CStat_I2C_NACK_ON_DATA"><code class="name">var <span class="ident">I2CStat_I2C_NACK_ON_DATA</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.I2CStat_I2C_OK"><code class="name">var <span class="ident">I2CStat_I2C_OK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.I2CStat_I2C_TIME_OUT"><code class="name">var <span class="ident">I2CStat_I2C_TIME_OUT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.POWER_DOWN_CMD"><code class="name">var <span class="ident">POWER_DOWN_CMD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.READ_REG_CMD"><code class="name">var <span class="ident">READ_REG_CMD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_BRG0"><code class="name">var <span class="ident">REG_BRG0</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_BRG1"><code class="name">var <span class="ident">REG_BRG1</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_I2CAdr"><code class="name">var <span class="ident">REG_I2CAdr</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_I2CClkH"><code class="name">var <span class="ident">REG_I2CClkH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_I2CClkL"><code class="name">var <span class="ident">REG_I2CClkL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_I2CStat"><code class="name">var <span class="ident">REG_I2CStat</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_I2CTO"><code class="name">var <span class="ident">REG_I2CTO</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_IOState"><code class="name">var <span class="ident">REG_IOState</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_PortConf1"><code class="name">var <span class="ident">REG_PortConf1</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.REG_PortConf2"><code class="name">var <span class="ident">REG_PortConf2</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.START_CMD"><code class="name">var <span class="ident">START_CMD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.STOP_CMD"><code class="name">var <span class="ident">STOP_CMD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="sc18im700.SC18IM700.WRITE_REG_CMD"><code class="name">var <span class="ident">WRITE_REG_CMD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="sc18im700.SC18IM700.enable_timeout"><code class="name flex">
+<span>def <span class="ident">enable_timeout</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enable timeout</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def enable_timeout(self):
+    &#34;&#34;&#34;Enable timeout
+    &#34;&#34;&#34;
+    self.write_reg(self.REG_I2CTO, 0x67)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.gpio_read"><code class="name flex">
+<span>def <span class="ident">gpio_read</span></span>(<span>self) ‑> bytes</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read GPIO register</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bytes</code></dt>
+<dd>Received GPIO register value</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def gpio_read(self) -&gt; bytes:
+    &#34;&#34;&#34;Read GPIO register
+
+    Returns:
+        bytes: Received GPIO register value
+    &#34;&#34;&#34;
+    wdata = self.GPIO_READ_CMD + self.STOP_CMD
+    self._tx(wdata)
+    return self._rx(1)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.gpio_write"><code class="name flex">
+<span>def <span class="ident">gpio_write</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write GPIO register</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>data</code></strong> :&ensp;<code>int</code></dt>
+<dd>GPIO register value</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def gpio_write(self, data:int) -&gt; None:
+    &#34;&#34;&#34;Write GPIO register
+
+    Args:
+        data (int): GPIO register value
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    wdata = self.GPIO_WRITE_CMD +  bytes([data]) + self.STOP_CMD
+    self._tx(wdata)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.i2c_device_search"><code class="name flex">
+<span>def <span class="ident">i2c_device_search</span></span>(<span>self) ‑> list[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Search and get I2C device address list</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list[int]</code></dt>
+<dd>Found I2C address list</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def i2c_device_search(self) -&gt; list[int]:
+    &#34;&#34;&#34;Search and get I2C device address list
+
+    Returns:
+        list[int]: Found I2C address list
+    &#34;&#34;&#34;
+    self.enable_timeout()
+    dev_addr_list = []
+    print(&#39;*I2C Device Search Start*&#39;)
+    for addr in range(0x01, 0x7E, 1):
+        self.i2c_write(bytes([0x00]), i2c_addr=addr)
+        res = self.read_reg(self.REG_I2CStat)
+        if res == bytes([self.I2CStat_I2C_OK]):
+            print(&#39;Device Found: 0x&#39; + &#39;{:X}&#39;.format(addr) + &#39; (7bit Address)&#39;)
+            dev_addr_list.append(addr)
+    print(&#39;*I2C Device Search End*&#39;)
+    return dev_addr_list</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.i2c_mem_read"><code class="name flex">
+<span>def <span class="ident">i2c_mem_read</span></span>(<span>self, reg_addr: int, size: int = 1, i2c_addr=None) ‑> bytes</span>
+</code></dt>
+<dd>
+<div class="desc"><p>I2C: Read an amount of data from a specific memory address</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>reg_addr</code></strong> :&ensp;<code>int</code></dt>
+<dd>Register address</dd>
+<dt><strong><code>size</code></strong> :&ensp;<code>int</code></dt>
+<dd>Amount of data</dd>
+<dt><strong><code>i2c_addr</code></strong> :&ensp;<code>optional</code></dt>
+<dd>Target device address. If omitted, use <code>default_i2c_addr</code></dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bytes</code></dt>
+<dd>Received data</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def i2c_mem_read(self, reg_addr:int, size:int=1, i2c_addr=None) -&gt; bytes:
+    &#34;&#34;&#34;I2C: Read an amount of data from a specific memory address
+
+    Args:
+        reg_addr (int): Register address
+        size (int): Amount of data
+        i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+    Returns:
+        bytes: Received data
+    &#34;&#34;&#34;
+    if i2c_addr is None:
+        i2c_addr = self._i2c_addr
+    addr_w = self._i2c_write_addr(i2c_addr)
+    addr_r = self._i2c_read_addr(i2c_addr)
+    wdata =  self.START_CMD + bytes([addr_w, 1]) + bytes([reg_addr])
+    wdata += self.START_CMD + bytes([addr_r, size]) + self.STOP_CMD
+    self._tx(wdata)
+    return self._rx(size)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.i2c_mem_write"><code class="name flex">
+<span>def <span class="ident">i2c_mem_write</span></span>(<span>self, reg_addr: int, data_bytes: bytes, i2c_addr=None) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>I2C: Write an amount of data to a specific memory address</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>reg_addr</code></strong> :&ensp;<code>int</code></dt>
+<dd>Register address</dd>
+<dt><strong><code>data_bytes</code></strong> :&ensp;<code>bytes</code></dt>
+<dd>Data</dd>
+<dt><strong><code>i2c_addr</code></strong> :&ensp;<code>optional</code></dt>
+<dd>Target device address. If omitted, use <code>default_i2c_addr</code></dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def i2c_mem_write(self, reg_addr:int, data_bytes:bytes, i2c_addr=None) -&gt; None:
+    &#34;&#34;&#34;I2C: Write an amount of data to a specific memory address
+
+    Args:
+        reg_addr (int): Register address
+        data_bytes (bytes): Data
+        i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    if i2c_addr is None:
+        i2c_addr = self._i2c_addr
+    addr_w = self._i2c_write_addr(i2c_addr)
+    wdata =  self.START_CMD + bytes([addr_w, 1]) + bytes([reg_addr])
+    wdata += self.START_CMD + bytes([addr_w, len(data_bytes)]) + bytes(data_bytes) + self.STOP_CMD
+    self._tx(wdata)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.i2c_read"><code class="name flex">
+<span>def <span class="ident">i2c_read</span></span>(<span>self, i2c_addr=None, size: int = 1) ‑> bytes</span>
+</code></dt>
+<dd>
+<div class="desc"><p>I2C: Receives in master mode an amount of data</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>i2c_addr</code></strong> :&ensp;<code>optional</code></dt>
+<dd>Target device address. If omitted, use <code>default_i2c_addr</code></dd>
+<dt><strong><code>size</code></strong> :&ensp;<code>int</code></dt>
+<dd>Amount of data</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bytes</code></dt>
+<dd>Received data</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def i2c_read(self, i2c_addr=None, size:int=1) -&gt; bytes:
+    &#34;&#34;&#34;I2C: Receives in master mode an amount of data
+
+    Args:
+        i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+        size (int): Amount of data
+
+    Returns:
+        bytes: Received data
+    &#34;&#34;&#34;
+    if i2c_addr is None:
+        i2c_addr = self._i2c_addr
+    addr_r = self._i2c_read_addr(i2c_addr)
+    wdata = self.START_CMD + bytes([addr_r, size]) + self.STOP_CMD
+    self._tx(wdata)
+    return self._rx(size)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.i2c_write"><code class="name flex">
+<span>def <span class="ident">i2c_write</span></span>(<span>self, data_bytes: bytes, i2c_addr=None) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>I2C: Transmits in master mode an amount of data</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>data_bytes</code></strong> :&ensp;<code>bytes</code></dt>
+<dd>Data</dd>
+<dt><strong><code>i2c_addr</code></strong> :&ensp;<code>optional</code></dt>
+<dd>Target device address. If omitted, use <code>default_i2c_addr</code></dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def i2c_write(self, data_bytes:bytes, i2c_addr=None) -&gt; None:
+    &#34;&#34;&#34;I2C: Transmits in master mode an amount of data
+
+    Args:
+        data_bytes (bytes): Data
+        i2c_addr (optional): Target device address. If omitted, use `default_i2c_addr`
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    size = len(data_bytes)
+    if i2c_addr is None:
+        i2c_addr = self._i2c_addr
+    if size &gt;= 256:
+        raise Exception(&#34;Cannot i2c write more than 256 bytes&#34;)
+    addr_w = self._i2c_write_addr(i2c_addr)
+    wdata = self.START_CMD + bytes([addr_w, size]) + data_bytes + self.STOP_CMD
+    self._tx(wdata)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.power_down"><code class="name flex">
+<span>def <span class="ident">power_down</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Power down</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def power_down(self) -&gt; None:
+    &#34;&#34;&#34;Power down
+    &#34;&#34;&#34;
+    wdata = self.POWER_DOWN_CMD +  bytes([0x5A, 0xA5]) + self.STOP_CMD
+    self._tx(wdata)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.read_reg"><code class="name flex">
+<span>def <span class="ident">read_reg</span></span>(<span>self, reg_addr: int) ‑> bytes</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get value in one register</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>reg_addr</code></strong> :&ensp;<code>int</code></dt>
+<dd>Register address</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bytes</code></dt>
+<dd>Register value</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_reg(self, reg_addr:int) -&gt; bytes:
+    &#34;&#34;&#34;Get value in one register
+
+    Args:
+        reg_addr (int): Register address
+
+    Returns:
+        bytes: Register value
+    &#34;&#34;&#34;
+    wdata = self.READ_REG_CMD + bytes([reg_addr]) + self.STOP_CMD
+    self._tx(wdata)
+    return self._rx(1)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.read_regs"><code class="name flex">
+<span>def <span class="ident">read_regs</span></span>(<span>self, regAddrs: list[int]) ‑> bytes</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get values in multiple registers</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>regAddrs</code></strong> :&ensp;<code>list[int]</code></dt>
+<dd>Register addresses. [REG_ADDR0, &hellip;, REG_ADDRn]</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bytes</code></dt>
+<dd>Received register values</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_regs(self, regAddrs:list[int]) -&gt; bytes:
+    &#34;&#34;&#34;Get values in multiple registers
+
+    Args:
+        regAddrs (list[int]): Register addresses. [REG_ADDR0, ..., REG_ADDRn]
+
+    Returns:
+        bytes: Received register values
+    &#34;&#34;&#34;
+    wdata = self.READ_REG_CMD + bytes(regAddrs) + self.STOP_CMD
+    self._tx(wdata)
+    return self._rx(len(regAddrs))</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.set_defalt_i2c_addr"><code class="name flex">
+<span>def <span class="ident">set_defalt_i2c_addr</span></span>(<span>self, default_i2c_addr: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set default I2C Address</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>default_i2c_addr</code></strong> :&ensp;<code>int</code></dt>
+<dd>I2C Address</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_defalt_i2c_addr(self, default_i2c_addr:int) -&gt; None:
+    &#34;&#34;&#34;Set default I2C Address
+
+    Args:
+        default_i2c_addr (int): I2C Address
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    self._i2c_addr = default_i2c_addr</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.write_reg"><code class="name flex">
+<span>def <span class="ident">write_reg</span></span>(<span>self, reg_addr: int, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set value in one register</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>reg_addr</code></strong> :&ensp;<code>int</code></dt>
+<dd>Register address</dd>
+<dt><strong><code>data</code></strong> :&ensp;<code>int</code></dt>
+<dd>Register value</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_reg(self, reg_addr:int, data:int) -&gt; None:
+    &#34;&#34;&#34;Set value in one register
+
+    Args:
+        reg_addr (int): Register address
+        data (int): Register value
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    wdata = self.WRITE_REG_CMD + bytes([reg_addr]) + bytes([data]) + self.STOP_CMD
+    self._tx(wdata)</code></pre>
+</details>
+</dd>
+<dt id="sc18im700.SC18IM700.write_regs"><code class="name flex">
+<span>def <span class="ident">write_regs</span></span>(<span>self, regAddr_vals: list[int]) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set values in multiple registers</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>regAddr_vals</code></strong> :&ensp;<code>list[int]</code></dt>
+<dd>Register address and values. [REG_ADDR0, REG_VAL0, &hellip;, REG_ADDRn, REG_VALn]</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_regs(self, regAddr_vals:list[int]) -&gt; None:
+    &#34;&#34;&#34;Set values in multiple registers
+
+    Args:
+        regAddr_vals (list[int]): Register address and values. [REG_ADDR0, REG_VAL0, ..., REG_ADDRn, REG_VALn]
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    wdata = self.WRITE_REG_CMD + bytes(regAddr_vals) + self.STOP_CMD
+    self._tx(wdata)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="sc18im700.SC18IM700" href="#sc18im700.SC18IM700">SC18IM700</a></code></h4>
+<ul class="">
+<li><code><a title="sc18im700.SC18IM700.GPIO_READ_CMD" href="#sc18im700.SC18IM700.GPIO_READ_CMD">GPIO_READ_CMD</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.GPIO_WRITE_CMD" href="#sc18im700.SC18IM700.GPIO_WRITE_CMD">GPIO_WRITE_CMD</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.I2CStat_I2C_NACK_ON_ADDRESS" href="#sc18im700.SC18IM700.I2CStat_I2C_NACK_ON_ADDRESS">I2CStat_I2C_NACK_ON_ADDRESS</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.I2CStat_I2C_NACK_ON_DATA" href="#sc18im700.SC18IM700.I2CStat_I2C_NACK_ON_DATA">I2CStat_I2C_NACK_ON_DATA</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.I2CStat_I2C_OK" href="#sc18im700.SC18IM700.I2CStat_I2C_OK">I2CStat_I2C_OK</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.I2CStat_I2C_TIME_OUT" href="#sc18im700.SC18IM700.I2CStat_I2C_TIME_OUT">I2CStat_I2C_TIME_OUT</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.POWER_DOWN_CMD" href="#sc18im700.SC18IM700.POWER_DOWN_CMD">POWER_DOWN_CMD</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.READ_REG_CMD" href="#sc18im700.SC18IM700.READ_REG_CMD">READ_REG_CMD</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_BRG0" href="#sc18im700.SC18IM700.REG_BRG0">REG_BRG0</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_BRG1" href="#sc18im700.SC18IM700.REG_BRG1">REG_BRG1</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_I2CAdr" href="#sc18im700.SC18IM700.REG_I2CAdr">REG_I2CAdr</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_I2CClkH" href="#sc18im700.SC18IM700.REG_I2CClkH">REG_I2CClkH</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_I2CClkL" href="#sc18im700.SC18IM700.REG_I2CClkL">REG_I2CClkL</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_I2CStat" href="#sc18im700.SC18IM700.REG_I2CStat">REG_I2CStat</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_I2CTO" href="#sc18im700.SC18IM700.REG_I2CTO">REG_I2CTO</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_IOState" href="#sc18im700.SC18IM700.REG_IOState">REG_IOState</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_PortConf1" href="#sc18im700.SC18IM700.REG_PortConf1">REG_PortConf1</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.REG_PortConf2" href="#sc18im700.SC18IM700.REG_PortConf2">REG_PortConf2</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.START_CMD" href="#sc18im700.SC18IM700.START_CMD">START_CMD</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.STOP_CMD" href="#sc18im700.SC18IM700.STOP_CMD">STOP_CMD</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.WRITE_REG_CMD" href="#sc18im700.SC18IM700.WRITE_REG_CMD">WRITE_REG_CMD</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.enable_timeout" href="#sc18im700.SC18IM700.enable_timeout">enable_timeout</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.gpio_read" href="#sc18im700.SC18IM700.gpio_read">gpio_read</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.gpio_write" href="#sc18im700.SC18IM700.gpio_write">gpio_write</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.i2c_device_search" href="#sc18im700.SC18IM700.i2c_device_search">i2c_device_search</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.i2c_mem_read" href="#sc18im700.SC18IM700.i2c_mem_read">i2c_mem_read</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.i2c_mem_write" href="#sc18im700.SC18IM700.i2c_mem_write">i2c_mem_write</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.i2c_read" href="#sc18im700.SC18IM700.i2c_read">i2c_read</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.i2c_write" href="#sc18im700.SC18IM700.i2c_write">i2c_write</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.power_down" href="#sc18im700.SC18IM700.power_down">power_down</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.read_reg" href="#sc18im700.SC18IM700.read_reg">read_reg</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.read_regs" href="#sc18im700.SC18IM700.read_regs">read_regs</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.set_defalt_i2c_addr" href="#sc18im700.SC18IM700.set_defalt_i2c_addr">set_defalt_i2c_addr</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.write_reg" href="#sc18im700.SC18IM700.write_reg">write_reg</a></code></li>
+<li><code><a title="sc18im700.SC18IM700.write_regs" href="#sc18im700.SC18IM700.write_regs">write_regs</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
